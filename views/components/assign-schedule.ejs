@@ -1,0 +1,28 @@
+<form action="/schedule-submit" method="POST">
+
+  <label for="date">Date:</label>
+  <input type="date" name="date" id="date" required />
+  <br />
+
+  <label for="shiftStartTime">Shift Start Time:</label>
+  <input type="time" name="shiftStartTime" id="shiftStartTime" required />
+  <br />
+
+  <label for="shiftEndTime">Shift End Time:</label>
+  <input type="time" name="shiftEndTime" id="shiftEndTime" required />
+  <br />
+
+  <label for="task">Task:</label>
+  <input type="text" name="task" id="task" required />
+  <br />
+
+  <label for="status">Status:</label>
+  <select name="status" id="status" required>
+    <option value="Scheduled">Scheduled</option>
+    <option value="Completed">Completed</option>
+    <option value="Canceled">Canceled</option>
+  </select>
+  <br />
+
+  <button type="submit">Create Schedule</button>
+</form>

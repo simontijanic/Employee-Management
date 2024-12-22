@@ -1,0 +1,25 @@
+<%- include('components/head') %>
+
+<section class="main-container">
+<h1>USER PROFILE!!!</h1>
+<%= employee  %>
+</section>
+
+<% if (isCurrentUser) { %>
+    <h2>Create an Application</h2>
+    <form action="/application-submit" method="POST">
+      <input type="hidden" name="employee" value="<%= employee._id %>">
+      <label for="type">Application Type:</label>
+      <select name="type" id="type" required>
+        <option value="sick_leave">Sick Leave</option>
+        <option value="vacation">Vacation</option>
+        <option value="personal_leave">Personal Leave</option>
+      </select>
+      <label for="description">Description:</label>
+      <textarea name="description" id="description" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  <% } %>
+  
+
+<%- include('components/foot') %>

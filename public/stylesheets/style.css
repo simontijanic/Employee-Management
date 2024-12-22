@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Racing+Sans+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --padding-size: 50px;
+    --padding-size-half: 25px;
+    --font-size-xs: 0.5rem; /* Extra Small */
+    --font-size-sm: 0.75rem; /* Small */
+    --font-size-md: 0.875rem; /* Medium (Base Size) */
+    --font-size-lg: 1rem; /* Large */
+    --font-size-xl: 1.25rem; /* Extra Large */
+    --font-size-xxl: 1.5rem; /* Double Extra Large */
+    --font-size-xxxl: 2rem; /* Triple Extra Large */  
+
+     
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.montserrat {
+    font-family: "Montserrat", serif;
+}  
+
+.main-container {
+    padding-left: var(--padding-size);
+    padding-right: var(--padding-size);
+    padding-top: var(--padding-size-half);
+    padding-bottom: var(--padding-size-half);
+
+    margin: 0;      /* Remove default margin */
+    box-sizing: border-box;  /* Include padding in the width/height calculation */
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.section-login {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.login-container {
+    height: 80%;
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: var(--font-size-lg);
+}
+.login-container h1 {
+    font-size: var(--font-size-xxxl);
+}
+.login-container h3 {
+    width: 75%;
+    font-size: var(--font-size-xl);
+}
+
+.login-container form  {
+    display: flex;
+    gap: var(--font-size-xxl);
+}
+
+.login-image-container {
+    height: 100%;
+    width: 50%;
+}
+.login-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.header {
+    width: 100%;
+    height: 75px;
+
+    padding: var(--padding-size-half);
+    box-sizing: border-box;
+
+    background-color: rgb(243, 243, 243);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center ;
+}
+.user-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--font-size-lg);
+}
+.user-container .image-container {
+	line-height: 0;		
+	display: inline-block;
+	border-radius: 50%;
+    height: 48px;
+    width: 48px;
+}
+.user-container .image-container img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+	border-radius: 50%;
+}
+.user-container .user-box h1 {
+    font-size: var(--font-size-lg);
+}
+.user-container .user-box h2 {
+    font-size: var(--font-size-md);
+    font-weight: 400;
+}
+.header-navigation {
+    display: flex;
+    flex-direction: row;
+    gap: var(--font-size-xxl);
+}
+.header-navigation a {
+    font-size: var(--font-size-lg);
+    color: black;
+    text-decoration: none;
+}
+
+.dashboard-container {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: last baseline;
+    flex-direction: column;
+}
+
+.employee-list {
+    width: 100%;
+    height: 80%;
+    display: grid flex;
+    grid-template-columns: 1fr;
+    align-items: start; 
+    justify-content: first baseline;
+}
+
+.employee-item {
+    
+    height: 75px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr auto; /* Equal columns for name, number, role, and dynamic space for admin action */
+    align-items: center; /* Align items vertically */
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid rgb(243, 243, 243);
+    box-sizing: border-box;
+
+    font-size: var(--font-size-xs);
+
+}
+
+.employee-item a {
+    font-size: var(--font-size-md);
+    text-decoration: none;
+    font-weight: 800;
+    color: black;
+}
+
+.employee-navigation {
+    width: 100%;
+    height: 20%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.employee-temp {
+   width: 100%;
+   height: 50px;
+
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr auto; /* Equal columns for name, number, role, and dynamic space for admin action */
+  font-size: var(--font-size-xs);
+   border-bottom: 1px solid rgb(243, 243, 243);
+   box-sizing: border-box;
+}
+
+.employee-temp h2 {
+    flex: 1;
+    font-weight: 400;
+}
+
+.active {
+    font-weight: 800;
+}
+
+.calendar-container {
+    padding-top: var(--padding-size-half);
+    width: 100%;
+    height: 100%;
+}
+
+.weekly-schedule {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: var(--font-size-sm);
+    height: 100%;
+    width: 100%;
+}
+.day-schedule {
+    padding: var(--font-size-xs);
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.day-schedule h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.day-schedule ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.day-schedule li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.day-schedule li:last-child {
+    border-bottom: none;
+}
+
+.day-schedule p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+.no-schedule {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+}
+
+.main-schedule-container,
+.assign-schedule-container {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+

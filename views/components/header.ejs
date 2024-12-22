@@ -1,0 +1,28 @@
+<header class="header">
+    <div>
+        <h1>LOGO</h1>
+    </div>
+    <div class="header-navigation">
+        <a class="<% if (path=="dashboard") { %>
+         active
+        <% } %>" href="/">Employees</a>
+        <a class="<% if (path=="schedule") { %>
+            active
+           <% } %>" href="/schedule">Schedule</a>
+        <a href="">Jobs</a>
+        <% if (role == "admin") { %>
+            <a class="<% if (path=="applications") { %>
+                active
+               <% } %>" href="/applications">Applications</a>    
+        <% } %>
+    </div>
+    <div class="user-container">
+        <div class="image-container">
+            <img  src="http://www.gravatar.com/avatar/9017a5f22556ae0eb7fb0710711ec125?s=128" alt="Cloud Chen">
+        </div>
+        <div class="user-box">
+            <h1><%= user.name  %></h1>
+            <h2><%= role  %></h2>
+        </div>
+    </div>
+</header>
